@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Capy Mobile on the PC (Linux or WSL): the app's own code with the simulator in place of the console.
 #   bash tests/run.sh <out folder> <home folder with games/> "<script>"     (sim.c explains the script)
-# The engine is fetched by engine.sh and built here once, as a library. Example, with the 2048 game
-# that comes with the engine:
-#   mkdir -p /tmp/home/games && cp "$(bash engine.sh)/tests/g2048.jar" /tmp/home/games/
-#   bash tests/run.sh /tmp/shots /tmp/home "w20 s:list X w240 s:game R w30 D w30 s:moved OPT w10 s:menu"
+# The engine is fetched by engine.sh and built here once, as a library. Example, with the Snake that
+# comes with the app:
+#   mkdir -p /tmp/home/games && cp games/snake.jar /tmp/home/games/
+#   bash tests/run.sh /tmp/shots /tmp/home "w20 s:list X w120 R w40 D w40 s:game OPT w10 s:menu"
 set -euo pipefail
 here=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 repo=$(cd -- "$here/.." && pwd)

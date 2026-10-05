@@ -67,5 +67,7 @@ rm -rf "$out/$title"
 mkdir -p "$out"
 cp -r "$tool/dist/$title" "$out/"
 mkdir -p "$out/$title/games" "$out/$title/saves"
+# The game that comes with the app (games/: Snake, with its licence beside it).
+cp -p "$here"/games/* "$out/$title/games/"
 (cd "$out" && rm -f "CapyMobile-$version.zip" && python3 -m zipfile -c "CapyMobile-$version.zip" "$title")
 echo "Capy Mobile $version: $out/$title (and CapyMobile-$version.zip)"

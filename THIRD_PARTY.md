@@ -5,6 +5,7 @@
 | File | What | Licence |
 |---|---|---|
 | `third_party/dlmalloc.c` | Doug Lea's malloc 2.8.6, unchanged (from https://gee.cs.oswego.edu/pub/misc/malloc-2.8.6.c, SHA-256 `103602c3fcbe200d5e257cdd7353d84bcc033d887bea3b245321319bf5401f47`). The app's heap on the console. | Public domain (CC0) |
+| `games/snake.jar` | Snake 1.0 by Anas Rin, unchanged, from the v1.0 release of https://github.com/anasrar/java-me-snake (SHA-256 `16409f59ded6320665db2857638dcd9de94bb23fd2fc20f35d2e890c8051ba93`). The game that comes with the app; its licence is `games/snake.LICENSE.txt`. | MIT |
 | `third_party/stb_image_write.h` | stb_image_write 1.16 by Sean Barrett. Only the PC simulator uses it, to save PNGs. | Public domain or MIT |
 
 ## Fetched when building, not included

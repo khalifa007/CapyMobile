@@ -12,7 +12,9 @@ and the DualSense standing in for the phone's keys.
 
 It is built on [noJMe](https://github.com/corax89/noJMe), an open-source J2ME emulator written in C,
 and on [ps5-native-app-boilerplate](https://github.com/blackbearreloaded/ps5-native-app-boilerplate).
-No Java is installed on the console and no games are included.
+No Java is installed on the console. One small open-source game comes with it, so there is something
+to play at once: [Snake](https://github.com/anasrar/java-me-snake) by Anas Rin (MIT), the game in the
+pictures above. Everything else you add yourself.
 
 ## Status
 
@@ -28,7 +30,8 @@ Early, but it plays. It was developed and tried on one PS5 on system software 13
 
 - A jailbroken PS5 with **ShadowMount+** (it registers the app from `/data/homebrew`) and an **FTP
   server** such as ftpsrv. It was made on a console running kstuff and ShadowMount+ 1.7.
-- The games themselves, as `.jar` files. Only use games you have the right to use.
+- Games, as `.jar` files. Only use games you have the right to use. Open-source ones exist: for
+  example the 100 small games of [j2me-100-games](https://github.com/agneay/j2me-100-games) (MIT).
 
 ## Install
 
@@ -99,8 +102,8 @@ The app's own code runs on the PC with a scripted controller and saves screens a
 it is checked without a console:
 
 ```
-mkdir -p /tmp/home/games && cp "$(bash engine.sh)/tests/g2048.jar" /tmp/home/games/
-PORTED=1 bash tests/run.sh /tmp/shots /tmp/home "w20 s:list X w240 s:game R w30 D w30 s:moved OPT w10 s:menu"
+mkdir -p /tmp/home/games && cp games/snake.jar /tmp/home/games/
+PORTED=1 bash tests/run.sh /tmp/shots /tmp/home "w20 s:list X w120 R w40 D w40 s:game OPT w10 s:menu"
 ```
 
 `tests/sim.c` explains the script words. `PORTED=1` builds the engine exactly as the console gets it.
@@ -130,6 +133,7 @@ It stands on other people's work:
 - [ps5-payload-sdk](https://github.com/ps5-payload-dev/sdk) by John Törnblom and contributors.
 - Mihawk's [PS5_RetroArch](https://github.com/mihawk-99/PS5_RetroArch) and its platform notes, and
   Swordpdf's [PS5SX2](https://github.com/Swordpdf/PS5SX2), for showing what a PS5 title can and cannot do.
+- Anas Rin's [Snake](https://github.com/anasrar/java-me-snake), the game that comes with the app.
 - Doug Lea's allocator and Sean Barrett's stb_image_write (see [THIRD_PARTY.md](THIRD_PARTY.md)).
 
 ## Licence
